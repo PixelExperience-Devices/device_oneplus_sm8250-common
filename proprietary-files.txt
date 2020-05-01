@@ -1025,6 +1025,14 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
+# Vibrator HAL - from OnePlus/OnePlus8_EEA/OnePlus8:10/QKQ1.191222.002/2008300400:user/release-keys
+vendor/lib/hw/vibrator.default.so|1234898d57b199bf19447b7d3c75ae67d97d0a1c
+vendor/lib/hw/android.hardware.vibrator@1.0-impl.so|d05f221da6d60be86ace4491012cff43c50561b8
+vendor/lib64/hw/vibrator.default.so|20bbc495bb32446a4e9e44ea910f35e122971f35
+vendor/lib64/hw/android.hardware.vibrator@1.0-impl.so|e2457f91f55fc7879ca276879778779cc32d8248
+vendor/etc/init/android.hardware.vibrator@1.0-service.rc|85b0f432b059c8d57e4a1822fa815cb5bf5f42cb
+vendor/bin/hw/android.hardware.vibrator@1.0-service|d04d062c883833c49d72bb8501aa18151afd55e4
+
 # Vibrator firmware
 vendor/firmware/100ms_RTP.bin
 vendor/firmware/120ms_RTP.bin
