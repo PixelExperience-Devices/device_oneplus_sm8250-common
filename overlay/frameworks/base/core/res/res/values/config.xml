@@ -407,4 +407,7 @@
         <item>com.android.location.fused</item>
         <item>com.google.android.gms</item>
     </string-array>
+
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
 </resources>
