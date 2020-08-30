@@ -37,6 +37,10 @@ product/lib64/libdpmfdmgr.so
 product/lib64/libdpmframework.so
 product/lib64/libdpmtcm.so
 
+# Fingerprint
+vendor/lib/libgf_ud_hal.so:product/vendor_overlay/29/lib/libgf_ud_hal.so
+vendor/lib64/libgf_ud_hal.so:product/vendor_overlay/29/lib64/libgf_ud_hal.so
+
 # HotwordEnrollment
 -priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
 -priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk

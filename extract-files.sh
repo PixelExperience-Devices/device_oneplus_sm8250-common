@@ -78,4 +78,7 @@ COMMON_BLOB_ROOT="${AOSP_ROOT}/vendor/${VENDOR}/${DEVICE_COMMON}/proprietary"
 
 sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${COMMON_BLOB_ROOT}/lib64/libwfdnative.so"
 
+sed -i "s|vendor.boot.verifiedbootstate|vendor.boot.fingerprintbstate|g" "${COMMON_BLOB_ROOT}/product/vendor_overlay/29/lib/libgf_ud_hal.so"
+sed -i "s|vendor.boot.verifiedbootstate|vendor.boot.fingerprintbstate|g" "${COMMON_BLOB_ROOT}/product/vendor_overlay/29/lib64/libgf_ud_hal.so"
+
 "${MY_DIR}/setup-makefiles.sh"
