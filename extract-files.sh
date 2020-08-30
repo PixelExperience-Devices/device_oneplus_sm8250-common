@@ -69,6 +69,9 @@ function blob_fixup() {
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             "${SIGSCAN}" -p "1F 0A 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
+        vendor/lib64/libgf_ud_hal.so|vendor/lib64/libgf_g6_ud_hal.so)
+            sed -i "s|vendor.boot.verifiedbootstate|vendor.boot.fingerprintbstate|g" "${2}"
+            ;;
     esac
 }
 
