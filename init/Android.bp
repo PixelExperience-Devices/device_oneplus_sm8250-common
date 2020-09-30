@@ -13,9 +13,9 @@
 // limitations under the License.
 
 cc_library_static {
-    name: "libinit_oneplus8",
+    name: "libinit_sm8250",
     recovery_available: true,
-    srcs: ["init_oneplus8.cpp"],
+    srcs: ["init_sm8250.cpp"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init"

@@ -111,7 +111,7 @@ TARGET_SURFACEFLINGER_FOD_LIB := //$(COMMON_PATH):libfod_extension.oneplus_kona
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_oneplus8
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8250
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
