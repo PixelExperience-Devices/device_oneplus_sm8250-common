@@ -18,3 +18,12 @@ type sysfs_usb_supply, sysfs_type, fs_type;
 
 # data
 type display_misc_file, file_type, data_file_type, core_data_file_type;
+
+# kgsl file type for sysfs access
+type sysfs_kgsl, sysfs_type, fs_type;
+
+# OEM File
+type oem_file, sysfs_type, fs_type;
+
+# used for /dsp files
+type adsprpcd_file, file_type, mlstrustedobject;

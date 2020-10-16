@@ -1,1 +1,2 @@
 type hal_display_hwservice, hwservice_manager_type;
+type hal_camera_postproc_hwservice, hwservice_manager_type;
