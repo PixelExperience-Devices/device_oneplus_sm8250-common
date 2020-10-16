@@ -11,6 +11,12 @@
     "branch"      : "ten"
   },
   {
+    "repository"  : "Chandra-Chaganti/device_oneplus_opcamera",
+    "target_path" : "device/oneplus/opcamera",
+    "branch"      : "op",
+    "remote"      : "gitlab"
+  },
+  {
     "repository"  : "android_device_oneplus_common",
     "target_path" : "device/oneplus/common",
     "branch"      : "lineage-17.1",
