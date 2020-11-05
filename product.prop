@@ -1,3 +1,11 @@
 # Audio
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
+
+# Device mask
+ro.build.fingerprint=google/sunfish/sunfish:11/RP1A.201005.006/6828489:user/release-keys
+ro.product.brand=google
+ro.product.device=sunfish
+ro.product.manufacturer=Google
+ro.product.model=Pixel 4a
+ro.product.name=sunfish
