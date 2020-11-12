@@ -17,6 +17,10 @@ sbin/dashd:bin/dashd
 product/lib64/libsdm-disp-apis.qti.so
 product/lib64/vendor.display.color@1.0.so
 
+# Dolby
+-priv-app/daxService/daxService.apk
+etc/permissions/com.dolby.daxservice.xml
+
 # DPM
 framework/tcmclient.jar
 product/bin/dpmd
