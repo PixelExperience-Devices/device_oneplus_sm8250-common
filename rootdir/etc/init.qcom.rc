@@ -274,6 +274,9 @@ on boot
     write /sys/bus/coresight/devices/coresight-stm/enable_source 1
     write /sys/bus/coresight/devices/coresight-stm/hwevent_enable 0
 
+    chown system system  /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_mode
+    chown system system  /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_srgb_color_mode
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
@@ -1070,3 +1073,18 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
+
+# Set sRGB calibration on Natural and Boosted Mode.
+on property:persist.sys.sf.native_mode=0
+    write /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_mode 0 
+    write /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_srgb_color_mode 1
+
+# Set unmanaged calibration on Saturated Mode.
+on property:persist.sys.sf.native_mode=1
+    write /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_srgb_color_mode 0
+    write /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_mode 0
+
+# Set P3 calibration on Adaptive/Automatic Mode.
+on property:persist.sys.sf.native_mode=2
+    write /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_srgb_color_mode 0
+    write /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_mode 1
