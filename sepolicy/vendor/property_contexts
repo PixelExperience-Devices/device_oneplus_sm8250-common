@@ -33,6 +33,7 @@ vendor.copy.opdiagnose.data               u:object_r:vendor_shell_prop:s0
 vendor.nfc.                               u:object_r:vendor_nfc_prop:s0
 vendor.oem.rbr.log.clean                  u:object_r:vendor_default_prop:s0
 vendor.oem.wifi.socket.quit               u:object_r:vendor_set_wlan_prop:s0
+vendor.powerhal.                          u:object_r:vendor_power_prop:s0
 vendor.service.wifi.socket.enable         u:object_r:vendor_oem_wifi_prop:s0
 vendor.service.wifi.socket.mdm.enable     u:object_r:vendor_oem_wifi_prop:s0
 vendor.sys.memplus.postboot               u:object_r:vendor_memplus_prop:s0

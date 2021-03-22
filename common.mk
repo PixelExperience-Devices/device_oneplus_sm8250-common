@@ -388,8 +388,11 @@ PRODUCT_BOOT_JARS += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
+    android.hardware.power-service.oneplus_kona-libperfmgr \
     vendor.qti.hardware.perf@2.0.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power-libperfmgr/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -417,7 +420,9 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    device/oneplus/common
+    device/oneplus/common \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Telephony
 PRODUCT_PACKAGES += \
