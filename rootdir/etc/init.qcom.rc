@@ -66,7 +66,42 @@ on early-init
     # Load WIGIG platform driver
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules msm_11ad_proxy
 
+    # governor settings
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor schedutil
+    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/down_rate_limit_us 20000
+
 on init
+    # cpuset and stune
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/background/cpus 0-5
+    write /dev/cpuset/system-background/cpus 0-5
+    write /dev/cpuset/restricted/cpus 2-5
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/foreground/schedtune.prefer_high_cap 1
+    write /dev/stune/foreground/schedtune.boost 100
+    write /dev/stune/schedtune.prefer_idle 1
+    write /dev/stune/schedtune.prefer_high_cap 1
+    write /dev/stune/schedtune.boost 100
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.prefer_high_cap 1
+    write /dev/stune/top-app/schedtune.boost 100
+
+    # fs tuning
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/scheduler cfq
+    write /sys/block/sda/queue/iosched/slice_idle 0
+    write /sys/block/sda/queue/nr_requests 256
+
+    # Disable powersaving
+    write /sys/module/lpm_levels/parameters/sleep_disabled 1
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
