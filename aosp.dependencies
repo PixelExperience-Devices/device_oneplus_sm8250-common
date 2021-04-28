@@ -8,7 +8,7 @@
   {
     "repository"  : "kernel_oneplus_sm8250",
     "target_path" : "kernel/oneplus/sm8250",
-    "branch"      : "eleven",
+    "branch"      : "eleven-wip",
     "remote"      : "pixel-devices"
   },
   {
