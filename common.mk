@@ -204,6 +204,7 @@ PRODUCT_PACKAGES += \
     init.oem.sec.rc \
     init.oem_ftm.rc \
     init.oplus_chg.sh \
+    init.opcamera.rc \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \

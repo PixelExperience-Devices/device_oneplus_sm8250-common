@@ -103,6 +103,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 TARGET_USE_QTI_BT_STACK := true
 
 # Camera
+TARGET_CAMERA_NEEDS_CLIENT_INFO := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
@@ -178,6 +179,7 @@ VENDOR_SECURITY_PATCH := 2021-06-01
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Verified Boot
