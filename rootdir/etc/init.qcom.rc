@@ -31,6 +31,7 @@ import /vendor/etc/init/hw/init.oem.minidump.sdx55m.rc
 import /vendor/etc/init/hw/init.oem.sec.rc
 #endif VENDOR_EDIT
 
+import /vendor/etc/init/hw/init.display.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
