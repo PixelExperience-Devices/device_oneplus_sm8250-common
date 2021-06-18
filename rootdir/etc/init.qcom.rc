@@ -864,7 +864,7 @@ service diag_mdlog_system_start /system/system_ext/bin/diag_mdlog_system -q 2 -c
     class late_start
     user shell
     group system oem_2901 oem_2902 sdcard_rw sdcard_r media_rw
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -872,7 +872,6 @@ service diag_mdlog_system_stop /system/system_ext/bin/diag_mdlog_system -k
     class late_start
     user shell
     group system oem_2901 sdcard_rw sdcard_r media_rw
-    writepid /dev/cpuset/system-background/tasks
     disabled
     oneshot
 
@@ -881,7 +880,7 @@ service diag_mdlog_wifi_start /system/system_ext/bin/diag_mdlog_system  -j 5 -s 
     class late_start
     user shell
     group system oem_2901 sdcard_rw sdcard_r media_rw
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -890,7 +889,7 @@ service diag_mdlog_wifi_stop /system/system_ext/bin/diag_mdlog_system   -k -j 5
     class late_start
     user shell
     group system oem_2901 sdcard_rw sdcard_r media_rw
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -967,7 +966,7 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
 # Logcat dump daemon, dumps logs to logdump partition
 service logdumpd /system/bin/logcat -b all -v threadtime -D -w /dev/block/bootdevice/by-name/logdump
     class core
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
     seclabel u:r:logdumpd:s0
     disabled
 
@@ -1033,5 +1032,5 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
     capabilities BLOCK_SUSPEND
     ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
+    task_profiles ProcessCapacityHigh HighPerformance
     onrestart restart audioserver
