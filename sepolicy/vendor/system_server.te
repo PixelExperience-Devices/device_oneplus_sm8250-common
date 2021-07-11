@@ -5,3 +5,4 @@ allow system_server hal_cameraHIDL_hwservice:hwservice_manager find;
 binder_call(system_server, hal_cameraHIDL_default)
 
 allow system_server app_zygote:process { getattr getpgid };
+allow system_server aosp_data_file:file r_file_perms;
