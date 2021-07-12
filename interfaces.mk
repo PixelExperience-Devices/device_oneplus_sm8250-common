@@ -20,7 +20,8 @@ android.hardware.authsecret@1.0.vendor
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
