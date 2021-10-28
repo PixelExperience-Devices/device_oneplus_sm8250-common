@@ -1,0 +1,2 @@
+persist.nfc.                              u:object_r:vendor_nfc_prop:s0
+ro.gfx.driver.1                           u:object_r:graphics_config_prop:s0
