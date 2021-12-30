@@ -78,7 +78,7 @@ AB_OTA_PARTITIONS += \
     vendor
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
