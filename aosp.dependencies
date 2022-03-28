@@ -2,11 +2,11 @@
   {
     "repository"  : "kernel_oneplus_sm8250",
     "target_path" : "kernel/oneplus/sm8250",
-    "branch"      : "twelve-wip",
+    "branch"      : "twelve",
     "remote"      : "pixel-devices"
   },
   {
-    "repository"  : "Hasaber8/android_hardware_oneplus",
+    "repository"  : "PixelExperience/hardware_oneplus",
     "target_path" : "hardware/oneplus",
     "branch"      : "twelve",
     "remote"      : "github"
