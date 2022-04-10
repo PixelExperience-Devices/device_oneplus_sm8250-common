@@ -8,7 +8,7 @@
   {
     "repository"  : "PixelExperience/hardware_oneplus",
     "target_path" : "hardware/oneplus",
-    "branch"      : "twelve",
+    "branch"      : "twelve-plus",
     "remote"      : "github"
   },
   {
