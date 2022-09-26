@@ -18,8 +18,6 @@ persist.vendor.audio.voicecall.speaker.stereo=true
 ro.vendor.audio.sdk.fluencetype=none
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.adm.buffering.ms=2
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.enable.mirrorlink=false
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
@@ -139,6 +137,18 @@ vendor.display.smomo_camera_support=1
 vendor.display.smomo_game_support=0
 vendor.display.use_layer_ext=1
 vendor.display.use_smooth_motion=1
+
+# Display post-processing
+debug.sf.disable_client_composition_cache=1
+
+# Dolby
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
+ro.vendor.dolby.dax.version=DAX3_3.5.1.28_r1
+ro.vendor.product.device.db=OP_DEVICE
+ro.vendor.product.manufacturer.db=OP_PHONE
+vendor.product.device=OP_PHONE
+vendor.product.manufacturer=OPD
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
