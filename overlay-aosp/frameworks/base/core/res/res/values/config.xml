@@ -62,4 +62,7 @@
         <item>org.thunderdog.challegram</item>
         <item>us.zoom.videomeetings</item>
     </string-array>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/devices/virtual/oplus_chg/battery/voocchg_ing</string>
 </resources>
